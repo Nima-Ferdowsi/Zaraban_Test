@@ -1,0 +1,252 @@
+body {
+  overflow-x: hidden !important;
+}
+.top_container {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#desktop_shape_img,
+#mobile_shape_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#mobile_shape_img {
+  display: none;
+}
+.mobile_img {
+  position: absolute;
+  top: 150px;
+  left: 255px;
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 95vw;
+  background: transparent;
+  z-index: 10;
+  cursor: pointer;
+  height: 100px;
+}
+
+.navbar a {
+  color: white !important;
+  padding: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.left_links {
+  position: absolute;
+  left: 80px;
+}
+.right_links {
+  position: absolute;
+  right: 4vw;
+}
+#mobile_icon {
+  display: none;
+}
+#tablet_icon {
+  display: none;
+}
+.download_sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#download_sec_subtitle {
+  padding-top: 15px;
+  font-size: 20px;
+}
+.btn_group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+.btn {
+  max-width: 160px;
+  width: 160px;
+  height: fit-content;
+  margin: 22px 11px 18px 14.5px;
+  padding: 11px 14.6px 10.6px 15px;
+  border-radius: 9.7px;
+  border-color: cadetblue;
+}
+.btn-primary {
+  max-width: 190px;
+  width: 190px;
+}
+.btn:not(.btn-primary) {
+  background-color: white;
+}
+#download_link {
+  color: cadetblue;
+  cursor: pointer;
+  text-align-last: center;
+}
+.download_sec h1 {
+  font-size: 35px;
+  text-align-last: center;
+}
+.img_sec,
+.download_sec {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.site_features_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.site_features_title {
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align-last: center;
+}
+.features_item_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.features_item {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features_title {
+  font-size: 18px;
+}
+.features_discription {
+  color: gray;
+}
+#site_features_sub{
+  text-align: center;
+  text-align-last: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .top_container {
+    height: auto;
+  }
+  .img_sec,
+  .download_sec {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .right_links {
+    right: 5vw;
+    top: 10px;
+  }
+  .left_links {
+    left: 0;
+  }
+  #desktop_icon {
+    display: none;
+  }
+
+  #mobile_icon {
+    display: block;
+    color: white;
+  }
+
+  .download_sec {
+    margin-top: 500px;
+    align-items: center;
+    height: fit-content;
+  }
+  .download_sec h1 {
+    font-size: 20px;
+  }
+  #download_sec_subtitle {
+    display: none;
+  }
+  #download_link {
+    font-size: 15px;
+   
+  }
+  .site_features_title {
+    font-size: 26px;
+  }
+  #desktop_shape_img {
+    display: none;
+  }
+  #mobile_shape_img {
+    display: block;
+    width: 100vw;
+    height: 437px;
+  }
+  .btn_group {
+    margin: auto;
+  }
+  .btn-primary {
+    width: 100%;
+    max-width: none;
+  }
+  .img_sec {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_img {
+    height: 380px;
+
+    left: 55%;
+    transform: translate(-50%);
+  }
+  .features_item {
+    margin-top: 40px;
+  }
+  .first {
+    order: 0;
+  }
+  .second {
+    order: 1;
+  }
+  .third {
+    order: 2;
+  }
+}
+@media only screen and (max-width: 1380px) {
+  /*   .download_sec {
+    margin-top: 500px;
+    align-items: center;
+    height: fit-content;
+
+  } */
+  #tablet_icon {
+    display: block;
+  }
+  #desktop_icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .features_item {
+    margin-left: 0;
+  }
+}
